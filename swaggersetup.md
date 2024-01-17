@@ -28,3 +28,28 @@ services.AddSwaggerGen(c =>
 
 In the Configure method:
 Enable the Swagger UI endpoint with the following code:
+
+app.UseSwagger();
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Your API Name v1");
+});
+
+
+3. Add XML Comments (Optional)
+To include XML comments in Swagger documentation:
+
+Enable XML documentation generation in your project properties.
+Then, add the code for including XML comments in the ConfigureServices method in Startup.cs.
+4. Build and Run the Project
+Build the project to check for any compilation errors.
+Run the project (Debug > Start Debugging or F5).
+5. Access the Swagger UI
+Open a web browser and navigate to https://localhost:<port>/swagger.
+Explore and test your API endpoints through the Swagger UI.
+Note
+These steps provide a basic implementation. You can customize the Swagger configuration and documentation to fit your specific requirements.
+
+
+This markdown file provides a structured and concise guide for implementing Swagger in an ASP.NET Core Web API project, suitable for documentation on GitHub or other platforms.
+
