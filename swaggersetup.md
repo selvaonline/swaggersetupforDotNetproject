@@ -63,3 +63,4 @@ These steps provide a basic implementation. You can customize the Swagger config
 
 This markdown file provides a structured and concise guide for implementing Swagger in an ASP.NET Core Web API project, suitable for documentation on GitHub or other platforms.
 
+https://dev.to/sardarmudassaralikhan/swagger-implementation-in-aspnet-core-web-api-5a5a
