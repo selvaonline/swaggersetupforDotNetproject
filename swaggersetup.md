@@ -41,6 +41,16 @@ To include XML comments in Swagger documentation:
 
 Enable XML documentation generation in your project properties.
 Then, add the code for including XML comments in the ConfigureServices method in Startup.cs.
+
+services.AddSwaggerGen(c =>
+{
+    // ...
+    var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+    c.IncludeXmlComments(xmlPath);
+});
+
+
 4. Build and Run the Project
 Build the project to check for any compilation errors.
 Run the project (Debug > Start Debugging or F5).
